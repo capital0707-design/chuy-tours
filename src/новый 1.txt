@@ -1,0 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ToursPage from './pages/ToursPage'
+import TourDetailPage from './pages/TourDetailPage'
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/tours" element={<ToursPage />} />
+        <Route path="/tours/:slug" element={<TourDetailPage />} />
+      </Routes>
+    </Router>
+  )
+}
+
+export default App
